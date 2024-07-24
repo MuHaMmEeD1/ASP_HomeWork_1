@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model ASP_HomeWork_1.Models.FoodsBox;
+
+<div class="text-center">
+    
+    <h1>Home</h1>
+    <h3>@nameof(Model.Drinks)</h3>
+    <a href="../Home/DrinksList">Detal</a>
+    <ul>
+        @foreach(var item in Model.Drinks)
+        {
+            <li>
+                <p>@item.Name</p>
+            </li>
+        }
+    </ul>
+
+    <h3>@nameof(Model.Hotmeals)</h3>
+    <a href="../Home/HotmealList">Detal</a>
+
+    <ul>
+        @foreach(var item in Model.Hotmeals)
+        {
+            <li>
+                <p>@item.Name</p>
+            </li>
+        }
+    </ul>
+
+    <h3>@nameof(Model.Fastfoods)</h3>
+    <a href="../Home/FastfoodList">Detal</a>
+
+    <ul>
+        @foreach(var item in Model.Fastfoods)
+        {
+            <li>
+                <p>@item.Name</p>
+            </li>
+        }
+    </ul>
+
+
+</div>
